@@ -1,0 +1,25 @@
+﻿<Window x:Class="WykladDoPDF.SavingProgressWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WykladDoPDF"
+        mc:Ignorable="d"
+        Title="SavingProgressWindow" Height="120" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Zapisywanie..." Margin="20, 0" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" FontSize="20"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ProgressBar x:Name="SavingProgressBar" Height="30" Margin="20,0, 10, 0" VerticalAlignment="Center" Grid.Column="0"/>
+            <TextBlock x:Name="SavingProgressText" Text="0%" Margin="0,0,10,2" HorizontalAlignment="Right" Grid.Column="1" VerticalAlignment="Center" FontSize="15" />
+        </Grid>
+        
+    </Grid>
+</Window>
